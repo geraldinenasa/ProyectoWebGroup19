@@ -1,0 +1,31 @@
+:root{
+  --principal: #318c7a;
+  --secundario: #92d8e8;
+  --terciario: #045163;
+  --letra:#e2ecec;
+}
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body{
+  width: 70vw;
+  margin: auto;
+  display: grid;
+}
+nav {
+  background-color: var(--principal);
+  color: var(--letra);
+  text-align: center;
+  padding: 10px 0;
+}
+nav a {
+  color: var(--letra);
+  text-decoration: none;
+  padding: 10px 20px;
+}
+nav a:hover {
+  background-color: var(--secundario);
+}
