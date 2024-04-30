@@ -1,3 +1,5 @@
+/* Estos son los estilos de la pagina index.html */
+
 :root{
   --principal: #318c7a;
   --secundario: #92d8e8;
@@ -11,15 +13,46 @@
   box-sizing: border-box;
 }
 body{
-  width: 70vw;
+  width: 100vw;
   margin: auto;
+}
+.header-home{
+  background-image: url('../img/perro-feliz.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: grid;
+  place-items: center;
+  color: var(--letra);
+  text-align: center;
+}
+.container{
+  display: grid;
+  gap: 20px;
+}
+.container h1{
+  font-size: 48px;
+}
+.container p{
+  font-size: 24px;
+}
+.inicio-button{
+  background-color: var(--principal);
+  color: var(--letra);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.inicio-button:hover{
+  background-color: var(--terciario);
 }
 nav {
   background-color: var(--principal);
   color: var(--letra);
   text-align: center;
   padding: 10px 0;
+  
 }
 nav a {
   color: var(--letra);
@@ -27,5 +60,12 @@ nav a {
   padding: 10px 20px;
 }
 nav a:hover {
-  background-color: var(--secundario);
+  background-color: var(--terciario);
 }
+
+/* Estilos de la pagina Adopción *
+
+
+
+
+/* Estilos de la pagina Nuestros Perros */
