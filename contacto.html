@@ -15,7 +15,60 @@
 
   </div> 
 <body>
+    <div class="contenedor">
+        <div class="texto">
+            <h2>Contáctanos</h2>
+            <p>
+              ¡Nos encantaría saber de ti! Si tienes alguna pregunta, sugerencia o simplemente               quieres ponerte en contacto con nosotros, no dudes en hacerlo. Completa el                     formulario a continuación y te responderemos lo antes posible.
+            </p>
+        </div>
+        <div class="form-contacto">
+            <form class="form">
+                <div class="form__grupo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form__grupo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form__grupo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form__grupo">
+                    <label for="motivo">Motivo de contacto:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">Seleccionar</option>
+                        <option value="Adopción">Adopción</option>
+                        <option value="Donación">Donación</option>
+                        <option value="Voluntariado">Voluntariado</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form__grupo">
+                    <label>Preferencias de contacto:</label>
+                    <input type="checkbox" id="emailCheck" name="preferencia" value="Email">
+                    <label for="emailCheck">Email</label>
+                    <input type="checkbox" id="telefonoCheck" name="preferencia" value="Teléfono">
+                    <label for="telefonoCheck">Teléfono</label>
+                </div>
+                <div class="form__grupo">
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+                </div>
+                <div class="form__grupo">
+                    <label for="imagen">Adjuntar imagen:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*">
+                </div>
+                <div class="form__grupo">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
 
+  
   <script src="js/nav.js"></script>
   <script src="js/script.js"></script>
 </body>
