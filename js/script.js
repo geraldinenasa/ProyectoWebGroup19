@@ -7,30 +7,44 @@ let mensaje = document.querySelector('#mensaje');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   validarFormulario();
-})
+});
 
 function validarFormulario() {
-  if (nombre.value === "") {
-    mensajeError(nombre, 'El nombre es requerido')
+  if (nombre.value.trim() === "") {
+    mensajeError(nombre, 'Debe rellenar este campo')
   } else {
-    console.log("Nombre: " + nombre.value)
-  };
-  if (email.value === "") {
-    mensajeError(email, 'El email es requerido')
+    inputValido(nombre)
+  }
+  
+  if (email.value.trim() === "") {
+    mensajeError(email, 'Debe rellenar este campo')
   } else {
-    console.log("Email: " + email.value)
-  };
-  if (telefono.value === "") {
-    mensajeError(telefono, 'El teléfono es requerido')
+    inputValido(email)
+  }
+  
+  if (telefono.value.trim() === "") {
+    mensajeError(telefono, 'Debe rellenar este campo')
   } else {
-    console.log(telefono.value)
+    inputValido(telefono)
+  }
+
+  if (mensaje.value.trim() === "") {
+    mensajeError(mensaje, 'Debe rellenar este campo')
+  } else {
+    inputValido(mensaje)
   }
 }
 
 function mensajeError(input, mensaje) {
-  const formControl = input.parentElement;
-  const mensajeError = formControl.querySelector('p');
-  mensajeError.innerText = mensaje;
+  const formBox = input.parentElement;
+  const msjeError = document.querySelectorAll('.msje-error');
+        msjeError.forEach((msje) => {
+          msje.innerText = mensaje;
+        formBox.className = 'form_box error';
+        });
+}
 
-  formControl.className = 'form-control error';
+function inputValido(input) {
+  const formBox = input.parentElement;
+        formBox.className = 'form_box valido';
 }

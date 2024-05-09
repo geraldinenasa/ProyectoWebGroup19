@@ -14,11 +14,12 @@
 }
 
 .contenedor {
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-top: 27px;
   background-color: #ede8e8;
+  margin: 20px auto;
 }
 
 .texto {
@@ -53,7 +54,7 @@
 
 /****Seccion formulario***  */
 .form-contacto {
-  width: 80%;
+  width: 90%;
   padding: 20px;
   text-align: left;
   margin: 0 auto;
@@ -66,26 +67,55 @@
 }
 
 .form_box {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .form_box label {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 300;
+  position: relative;
+}
+
+.form_box.valido input {
+    border: 1px solid;
+    border-color: #08ffc8;
+}
+
+.form_box.valido #mensaje {
+    border: 1px solid;
+    border-color: #08ffc8;
+}
+
+.form_box.error input {
+    border: 1px solid;
+    border-color: #fe5f55;
+}
+.form_box.error #mensaje {
+  border: 1px solid;
+  border-color: #fe5f55;
 }
 
 .form_box .input_text,
 .form_box textarea,
 .form_box select {
+  display: block;
   width: 100%;
   padding: 7px;
   font-size: 1.1em;
-  border: 1px dotted var(--terciario);
+  border: 1px solid var(--terciario);
   border-radius: 5px;
   margin-top: 7px;
 }
+
+#imagen {
+  margin-top: 10px;
+  font-size: 1em;
+  padding: 5px;
+}
+
+
 
 .form_box .submit {
   cursor: pointer;
@@ -93,7 +123,7 @@
   width: 35%;
   height: 2em;
   margin: 0 auto;
-  border: 1px dotted var(--terciario);;
+  border: 1px dotted var(--terciario);
   border-radius: 5px;
 }
 
@@ -105,20 +135,16 @@
   border: 0px;
   color: white;
 }
-#imagen {
-  margin-top: 10px;
-  font-size: 1em;
-  padding: 5px;
-}
-.form_box p {
-    visibility: hidden;
-    /* position: absolute; */
-    font-size: small;
-    font-weight: 500;
-    text-align: right;
+
+.form_box input p {
+  visibility: hidden;
+  position: absolute;
+  font-size: small;
+  font-weight: 300;
+  text-align: left;
 }
 
-.form-control.error p {
-    visibility: visible;
-    color:#e74c3c;
+.form_box.error p {
+  visibility: visible;
+  color: #e74c3c;
 }
