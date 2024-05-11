@@ -12,7 +12,9 @@
   font-weight: 300;
   font-style: normal;
 }
-
+body {
+   background-color: var(--principal);
+}
 .contenedor {
   width: 80%;
   display: grid;
