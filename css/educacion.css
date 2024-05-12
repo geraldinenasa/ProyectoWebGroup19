@@ -6,54 +6,80 @@
   --terciario: #045163;
   --letra: #e2ecec;
 }
+body {
+  background-color: var(--principal);
+}
 .roboto-light {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-#educacion {
-  width: 80%;
+
+.contenedor {
+  width: 100%;
+  height: auto;
   background-color: #ede8e8;
-  padding: 20px;
-  text-align: center;
-  margin: 20px auto;
-}
-.titulo {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2em;
-  padding: 20px;
-  text-decoration: underline;
-}
-.texto {
-  padding: 20px;
-  text-align: left;
-  font-size:1.2em;
 }
 .imagen {
   width: 100%;
-  margin-bottom: 20px;
 }
-.imagen img {
+.imagen .perros-varios{
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
 }
-.consejos {
-  heigth: auto;
-  widht: 100%;
+
+.titulo {
+  text-align: center;
+  font-size: 3em;
+  padding: 20px;
+  margin-top: 80px;
 }
-.tips {
+.seccion-texto {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.texto-principal {
+  width: 40%;
+  height: 300px;
+  padding: 20px;
   text-align: left;
-  font-size: 1.5em;
+  font-size:1.5em;
+}
+
+.box1 {
+  width: 45%;
+  height: auto;
+}
+.box1 img{
+  width: 100%;
+  height: auto;
+}
+.titulo-consejos {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 2.5em;
   padding: 20px;
 }
-.consejos p {
-  text-align: left;
+.lista-consejos {
+
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.lista-consejos p {
+  width: 220px;
+  height: auto;
+  
   font-size: 1.2em;
-  padding: 20px;
+  padding: 12px;
+}
+.lista-consejos p strong {
+  font-size: 1.3em;
 }
 .texto-2 {
   text-align: center;
