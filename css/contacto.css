@@ -17,12 +17,15 @@ body {
 }
 .contenedor {
   width: 100%;
-  height: 90vh;;
+  max-width: 1200px;
+  height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  background-color: #ede8e8;
-  margin: 20px auto;
+  background-color: var(--terciario);
+  color: var(--letra);
+  margin: 50px auto;
+  border-radius: 5px;
 }
 
 .texto {
@@ -31,12 +34,12 @@ body {
 }
 
 .texto h2 {
-  font-size: 30px;
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
 .texto p {
-  font-size: 20px;
+  font-size: 1.3em;
   margin-bottom: 20px;
   padding: 10px 20px 10px 0;
 }
@@ -57,7 +60,8 @@ body {
 
 /****Seccion formulario***  */
 .form-contacto {
-  width: 90%;
+  width: 80%;
+  height: auto;
   padding: 20px;
   text-align: left;
   margin: 0 auto;
@@ -77,27 +81,29 @@ body {
 
 .form_box label {
   font-size: 1.2em;
-  font-weight: 300;
+  font-weight: 500;
   position: relative;
 }
 
+.form_box .input_checkbox {
+  margin-right: 10px;
+}
+
+/*Validaciones de formuluario  */
 .form_box.valido input {
-    border: 1px solid;
-    border-color: #08ffc8;
+    border: 2px solid #08ffc8;
 }
 
 .form_box.valido #mensaje {
-    border: 1px solid;
-    border-color: #08ffc8;
+    border: 2px solid #08ffc8;
 }
 
-.form_box.error input {
-    border: 1px solid;
-    border-color: #fe5f55;
+.form_box.error input, select {
+    border: 2.5px solid #fe5f55;
 }
+
 .form_box.error #mensaje {
-  border: 1px solid;
-  border-color: #fe5f55;
+  border: 3px solid #fe5f55;
 }
 
 .form_box .input_text,
@@ -117,8 +123,6 @@ body {
   font-size: 1em;
   padding: 5px;
 }
-
-
 
 .form_box .submit {
   cursor: pointer;
@@ -143,7 +147,7 @@ body {
   visibility: hidden;
   position: absolute;
   font-size: small;
-  font-weight: 300;
+  font-weight: 600;
   text-align: left;
 }
 
