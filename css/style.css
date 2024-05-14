@@ -26,15 +26,16 @@ body {
   background-image: url('../img/new-perro2.png');
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -20vh;
 }
 
 .sombra {
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 #nav-externo {
@@ -129,15 +130,19 @@ body {
 }
 
 .menu {
-  background-color: var(--principal);
+  
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  top: 10px;
+  top: 0 auto;
   width: 100%;
   color: var(--letra);
   border-radius: 5px;
+  z-index: 2;
+  background-color: var(--principalTrans);
+
 }
 
 .menu-esc {
@@ -158,12 +163,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
 
 }
 
 .menu-lista li {
   margin-right: 20px;
+  padding: 5px 5px;
 }
+.menu-lista li:hover{
+  background-color: var(--secundario);
+  border-radius: 5%;
+}
+
 
 .menu-lista li:last-child {
   margin-right: 0;
@@ -175,13 +188,12 @@ body {
   color: var(--letra);
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 10px;
+  padding: 20px 20px;
+}
+.menu-lista li a:hover{
+  color: black;
 }
 
-.menu-lista li a:hover {
-  color: var(--secundario);
-  border-radius: 5px;
-}
 /*Estilo pantalla 768 a 1024px*/
 @media screen and (min-width: 768px) and (max-width: 1024px){
   .comentario {
@@ -274,6 +286,7 @@ body {
   .menu {
     flex-direction: column;
     align-items: center;
+    
   }
 
   .menu-esc {
@@ -287,7 +300,6 @@ body {
     width: 50%;
     text-align: center;
     padding: 10px 0px;
-    background-color: var(--principalTrans);
     z-index: 2;
   }
 
@@ -357,6 +369,7 @@ body {
   .menu {
     flex-direction: column;
     align-items: center;
+    
   }
 
   .menu-esc {
@@ -370,7 +383,6 @@ body {
     width: 100%;
     text-align: center;
     padding: 10px 0px;
-    background-color: var(--principalTrans);
     z-index: 2;
   }
 
