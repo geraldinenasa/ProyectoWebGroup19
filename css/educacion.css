@@ -21,7 +21,7 @@ body {
   max-width: 1200px;
   background-color: var(--terciario);
   color: var(--letra);
-  margin: 50px auto;
+  margin: -5vh auto;
 }
 .imagen {
   width: 100%;
