@@ -194,6 +194,75 @@ body {
   color: black;
 }
 
+/*Estilo de hoja de página adopción*/
+
+#requisitos-adopcion {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsive NO TOCAR*/
+
 /*Estilo pantalla 768 a 1024px*/
 @media screen and (min-width: 768px) and (max-width: 1024px){
   .comentario {
