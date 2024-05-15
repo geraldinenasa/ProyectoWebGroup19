@@ -24,7 +24,7 @@ body {
   grid-template-rows: 1fr;
   background-color: var(--terciario);
   color: var(--letra);
-  margin: 50px auto;
+  margin: -5vh auto;
   border-radius: 5px;
 }
 
