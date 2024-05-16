@@ -1,6 +1,6 @@
 :root {
   --principal: #318c7a;
-  --principalTrans: rgba(49, 140, 122, 0.5);
+  --principalTrans: rgba(49, 140, 122, 0.7);
   --secundario: #92d8e8;
   --secundarioTrans: rgba(146, 216, 232, 0.5);
   --terciario: #045163;
@@ -21,25 +21,21 @@ body {
   background-color: var(--principal);
   font-family: Arial, sans-serif;
 }
-
-.header-index {
+.body-index {
   background-image: url('../img/new-perro2.png');
   background-size: cover;
   background-position: center;
-  min-height: 110vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -20vh;
+  border-radius: 1%;
+  margin-top: 2vh;
 }
 
 .sombra {
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
-}
-
-#nav-externo {
-  height: 15vh;
 }
 
 .comentario {
@@ -101,20 +97,20 @@ body {
   transform: rotate(-35deg);
 }
 
-.header-texto {
+.body-texto {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
 }
 
-.header-cuadro {
+.body-cuadro {
   background-color: var(--principalTrans);
   border-radius: 20px;
   width: 100%;
   padding: 10px;
 }
 
-.header-cuadro h1 {
+.body-cuadro h1 {
   font-size: 3rem;
 }
 
@@ -130,18 +126,9 @@ body {
 }
 
 .menu {
-  
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-  top: 0 auto;
-  width: 100%;
+  padding: 10px 10px;
   color: var(--letra);
   border-radius: 5px;
-  z-index: 2;
-  background-color: var(--principalTrans);
 
 }
 
@@ -163,9 +150,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-
-
+  background-color: var(--principalTrans);
+ 
 }
 
 .menu-lista li {
@@ -293,17 +279,26 @@ strong {
     bottom: -27vh;
     left: 55vh;
   }
-  .header-texto {
+  .body-texto {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
   }
-  .header-cuadro h1 {
+  .body-cuadro h1 {
     font-size: 2rem;
   }
 
   .inicio-button {
     font-size: 1.4rem;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .menu-lista li {
+    margin: 10px 0;
+    padding: 0px;
   }
 }
 /*Estilo para tablet*/
@@ -318,7 +313,7 @@ strong {
   }
 
   .globo {
-    top: 50%;
+    top: 40%;
     width: 60%;
     max-width: 200px;
     left: 70%;
@@ -334,17 +329,17 @@ strong {
 
   .globo i {
     font-size: 5rem;
-    bottom: -15vh;
-    left: 20vh;
+    bottom: -10vh;
+    left: 33vh;
     z-index: -10;
     transform: rotate(-35deg);
   }
 
-  .header-texto {
+  .body-texto {
     margin-top: 0;
   }
 
-  .header-cuadro h1 {
+  .body-cuadro h1 {
     font-size: 1.5rem;
   }
 
@@ -353,9 +348,10 @@ strong {
   }
 
   .menu {
+    background-color: var(--principal);
     flex-direction: column;
     align-items: center;
-    
+    width: 100%;
   }
 
   .menu-esc {
@@ -364,10 +360,10 @@ strong {
 
   .menu-lista {
     display: none;
-    top: 60px;
+    top: 0 auto;
     right: 0;
-    width: 50%;
-    text-align: center;
+    width: 100%;
+    text-align: right;
     padding: 10px 0px;
     z-index: 2;
   }
@@ -392,7 +388,7 @@ strong {
     font-size: 12%;
   }
 
-  .header-index {
+  .body-index {
     height: 100%;
   }
 
@@ -417,17 +413,17 @@ strong {
 
   .globo i {
     font-size: 5rem;
-    bottom: -15vh;
-    left: 20vh;
+    bottom: -10vh;
+    left: 12vh;
     z-index: -10;
     transform: rotate(-35deg);
   }
 
-  .header-texto {
+  .body-texto {
     margin-top: 2vh;
   }
 
-  .header-cuadro h1 {
+  .body-cuadro h1 {
     font-size: 1.2rem;
   }
 
@@ -436,8 +432,10 @@ strong {
   }
 
   .menu {
+    background-color: var(--principal);
     flex-direction: column;
     align-items: center;
+    width: 100%;
     
   }
 
@@ -464,7 +462,7 @@ strong {
   .menu-lista li {
     margin: 10px 0;
   }
-
+ 
 }
 
 /* Estilos de la pagina Adopción *
@@ -487,7 +485,7 @@ strong {
   grid-template-rows: auto auto 1fr auto;
   background-color: var(--terciario);
   color: var(--letra);
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 5px;
 }
 
@@ -792,7 +790,7 @@ strong {
   max-width: 1200px;
   background-color: var(--terciario);
   color: var(--letra);
-  margin: -5vh auto;
+  margin: 20px auto;
 }
 .imagen {
   width: 100%;
@@ -867,3 +865,4 @@ strong {
   padding: 30px;
   margin-top: 50px;
 }
+ 
