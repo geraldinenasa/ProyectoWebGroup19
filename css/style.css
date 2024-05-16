@@ -404,3 +404,397 @@ body {
 
 
 /* Estilos de la pagina Nuestros Perros */
+
+
+
+
+/* Estilos de la pagina Contacto */
+
+.contenedor-contacto{
+  max-width: 1200px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  background-color: var(--terciario);
+  color: var(--letra);
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.box-contacto {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.titulo-contacto {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.parr-contacto {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 0;
+}
+
+.redes {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 20px;
+}
+
+.redes_titulo {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.redes a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: var(--letra);
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+.redes a i {
+  padding-right: 1em;
+}
+
+.direccion {
+  margin-right: 10px;
+}
+
+.direccion h3 {
+  margin-top: 1em;
+}
+
+.direccion p {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.direccion i {
+  margin-right: 1em;
+}
+
+
+.form-contacto {
+  grid-column: 2;
+  grid-row: 1/3;
+  width: 80%;
+  padding: 1rem;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+
+.form_box {
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+.form_box label {
+  font-size: 1.2em;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.form_box i {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  color: #313030;
+}
+
+.form_box .input_checkbox {
+  margin-right: 10px;
+}
+
+.form_box.valido input {
+    border: 2px solid #08ffc8;
+}
+
+.form_box.valido #mensaje {
+    border: 2px solid #08ffc8;
+}
+
+.form_box.error input, select {
+    border: 2.5px solid #fe5f55;
+}
+
+.form_box.error #mensaje {
+  border: 3px solid #fe5f55;
+}
+
+.form_box .input_text,
+.form_box textarea,
+.form_box select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  font-size: 1.1em;
+  border: 1px solid var(--terciario);
+  border-radius: 5px;
+  margin-top: 7px;
+}
+
+.upFile {
+  margin-top: 10px;
+  font-size: 1em;
+  padding: 5px;
+}
+
+.form_box .submit {
+  cursor: pointer;
+  font-size: 1.2em;
+  width: 35%;
+  height: 2em;
+  margin: 0 auto;
+  border: 1px dotted var(--terciario);
+  border-radius: 5px;
+}
+
+.form_box .submit:hover {
+  font-size: 1.3em;
+  background-color: var(--secundario);
+  font-weight: 600;
+  transition: 1s;
+  border: 0px;
+  color: white;
+}
+
+.form_box input p {
+  visibility: hidden;
+  position: absolute;
+  font-size: small;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form_box.error p {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.ubicacion {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+/* Media query para tablets */
+@media (min-width: 461px) and (max-width: 768px){
+  .contenedor-contacto {
+    grid-template-columns: 1fr;
+  }
+  .box-contacto {
+    grid-column: 1;
+  }
+  .redes {
+    grid-column: 1;
+    grid-row:2;
+  }
+  .form-contacto{
+    grid-column: 1;
+    grid-row:3;
+  }
+  .ubicacion {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
+/* Media query para celulares */
+@media (min-width: 100px) and (max-width:475px){
+  .contenedor-contacto {
+    grid-template-columns: 1fr;
+  }
+  .box-contacto {
+    grid-column: 1;
+  }
+  .titulo-contacto {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .parr-contacto {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .redes {
+    grid-column: 1;
+    grid-row:2;
+  }
+  .redes_titulo{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .redes a {
+    font-size: 1rem;
+  }
+  .direccion {
+    width: 100%;
+    margin: 50px auto;
+  }
+  .direccion h3{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .direccion p {
+    font-size: 1rem;
+  }
+
+  .form-contacto{
+    grid-column: 1;
+    grid-row:3;
+    width: 100%;
+    margin: 70px auto;
+  }
+  .form {
+    height: auto;
+  }
+  .form_box label {
+    font-size: 1.2rem;
+  }
+  .form_box i {
+    font-size: 1.1rem;
+  }
+  .form_box .input_text,
+  .form_box textarea,
+  .form_box select {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    width: 90%;
+    margin-bottom: 5px;
+    border: none;
+  }
+  .upFile {
+    font-size: 1rem;
+  }
+  .form_box .submit {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+  .form_box.error p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .ubicacion {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .ubicacion {
+    overflow: hidden;
+  }
+  
+  .map {
+    width: 100%;
+  }
+}
+
+
+
+/* Estilos de la Pagina educacion Canina */
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--terciario);
+  color: var(--letra);
+  margin: -5vh auto;
+}
+.imagen {
+  width: 100%;
+  margin: 0 auto;
+}
+.imagen .perros-varios{
+  width: 100%;
+  height: auto;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 3em;
+  padding: 20px;
+  margin-top: 100px; 
+}
+.seccion-texto {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  background-color: var(--terciario);
+}
+.texto-principal {
+  width: 40%;
+  height: 300px;
+  padding: 20px;
+  text-align: left;
+  font-size:1.5em;
+}
+
+.box1 {
+  width: 45%;
+  height: auto;
+  background-color: var(--terciario);
+}
+.box1 img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.titulo-consejos {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 20px;
+}
+.lista-consejos {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.lista-consejos p {
+  width: 350px;
+  max-width: 1200px;
+  height: auto;
+  padding: 20px;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.lista-consejos p strong {
+  font-size: 1.3em;
+}
+.texto-2 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 30px;
+  margin-top: 50px;
+}
