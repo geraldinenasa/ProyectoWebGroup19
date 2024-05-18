@@ -1,21 +1,48 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuestros Perros</title>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
- 
+
 <body>
-  <header class="header">
-    <div class="container sombra">
-    <div id="nav-externo"></div> 
+  <div class="container">
+    <div id="nav-externo"></div>
+  </div>
+  <header class="header_nuestros_perros sombra">
+    <div class="contenedor_h1">
+      <h1>Encuentra tu Compañero</h1>
     </div>
-</header>
+  </header>
+  <section class="section_nuestros_perros">
+    <p>En Refugio De Amigos Peludos, creemos firmemente en encontrar hogares amorosos y permanentes para cada uno de
+      nuestros amigos de cuatro patas.<br> Adoptar un perro no solo te brinda compañía y alegría, sino que también
+      salvas una vida y le das a un perro la oportunidad de tener un hogar lleno de amor y cuidado.<br>Desde perros
+      pequeños y juguetones hasta compañeros más grandes y tranquilos, tenemos una variedad de perros de diferentes
+      edades, tamaños y personalidades esperando ser adoptados.<br> Nuestro equipo estará encantado de ayudarte a
+      encontrar el compañero peludo perfecto que se adapte a tu estilo de vida y necesidades.</p>
+  </section>
+
+  <main>
+    <div id="card-container" class="contenedor_cards_perros"></div>
+  </main>
+
+
   <script src="js/nav.js"></script>
-  <script src="js/script.js"></script>
+  <!--   <script src="js/script.js"></script> -->
+  <script src="js/nuestros_perros.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+    });
+  </script>
 </body>
 
 </html>
