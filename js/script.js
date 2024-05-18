@@ -36,3 +36,7 @@ function inputValido(input) {
   const formBox = input.parentElement;
         formBox.className = 'form_box valido';
 };
+
+
+
+
