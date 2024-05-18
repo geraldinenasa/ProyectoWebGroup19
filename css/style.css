@@ -517,9 +517,6 @@ strong {
   transition: transform 0.999s;
 }
 
-/* .card:hover .card-inner {
-  transform: rotateY(180deg);
-} */
 .card.flip .card-inner {
   transform: rotateY(180deg);
 }
@@ -576,12 +573,44 @@ strong {
 }
 /* Estilo Tablet */
 @media (min-width: 461px) and (max-width: 768px) {
-
+  .header_nuestros_perros {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .card {
+    width: 350px;
+    height: 200px;
+  }
+  .contenedor_cards_perros{
+    grid-template-columns: repeat(2,auto);
+  }
 }
 
 /* Estilo celular */
 @media (max-width: 460px) {
-  
+
+  .header_nuestros_perros {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 8px;
+  }
+
+  .section_nuestros_perros{
+    font-size: 13px;
+  }
+  .card {
+    width: 300px;
+    height: 200px;
+  }
+  .contenedor_cards_perros{
+    grid-template-columns: repeat(1,auto);
+  }
+  .card-front h3{
+    font-size: 20px;
+  }
 }
 
 
