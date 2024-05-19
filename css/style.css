@@ -190,6 +190,7 @@ body {
   padding-right: 50px;
   background-color: #f4f4f4;
   border-radius: 10px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
