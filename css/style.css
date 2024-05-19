@@ -183,9 +183,11 @@ body {
 /*Estilo de hoja de página adopción*/
 
 #requisitos-adopcion {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: auto;
+  margin: auto;
+  margin-top: 20px;
+  padding: 40px;
+  padding-right: 50px;
   background-color: #f4f4f4;
   border-radius: 10px;
 }
@@ -197,18 +199,35 @@ h2 {
 
 p {
   line-height: 1.6;
+  text-align: justify;
 }
 
 ol {
   padding-left: 20px;
+  text-align: justify;
 }
 
 li {
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 strong {
   font-weight: bold;
+}
+
+div#video {
+  margin: auto;
+  padding-top: 20px;
+
+}
+
+.historia {
+    display: flex;
+    flex-wrap: wrap-reverse; /*se ajustan las cajas al ancho de la ventana, es decir se acomodan hacia cualquier linea*/
+    width: 750px;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 /* Estilo Footer*/
