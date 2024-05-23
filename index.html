@@ -1,28 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Icono Pestaña -->
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="./img/iconoPestaña.png">
   <title>Refugio de Mascotas</title>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <header class="header">
-    <h1>Nuestro Refugio de Amigos Peludos</h1>
-  </header>
-  <div class="container">
-    <div id="nav-externo"></div>
-    <div class="inicio-texto">
-      <p>¡Bienvenido a Nuestro Refugio de Amigos Peludos! Donde cada cola tiene una historia feliz.</p>
+    <div class="container">
+      <div id="nav-externo">
+        <!-- navegacion desde js -->
+      </div>
     </div>
-    <a href="#contacto" class="inicio-button">¡Adopta, Dona o Voluntarízate hoy mismo!</a>
-    <img src="img/perro-feliz.jpg" alt="Perros felices" class="perro-feliz">
+  </header>
+  <div class="body-index sombra">
+    <div class="comentario">
+      <div class="globo sombra">
+        <p>¡Bienvenido a Nuestro Refugio </p>
+        <p>de Amigos Peludos! </p>
+        <p>Donde cada cola tiene una historia feliz.</p>
+        <i class="fa-solid fa-paw"></i>
+      </div>
+    </div>
+    <div class="body-texto">
+      <div class="body-cuadro sombra">
+        <h1>Nuestro Refugio de Amigos Peludos</h1>
+
+        <a href="contacto.html" class="inicio-button">¡Adopta, Dona o sé Voluntario hoy mismo!</a>
+      </div>
+    </div>
   </div>
+
+  <footer>
+    <div id="datos">
+      <br>
+        <p>Calle Falsa 123, Ciudad, País</p>
+        <p>Teléfono: +1 234 567 890</p>
+        <p>refugioamigospeludos@info.org</p>
+        <p><a href="contacto.html">Quiero hacer donaciones</a></p>
+        <p><a href="educacionCanina.html">Como trabaja el refugio</a></p>
+        <p><a href="nuestrosPerros.html">Conoce nuestros rescataditos</a></p><br>
+            <div id="redes">
+                <nav id="botonera_footer">
+                    <ul>
+                        <li><a href="http://www.facebook.com/RefugioAmigosPeludos" target="_blank" ><img src="img/ico/fb.png" alt="Icono Facebook"></a></li>
+                        <li><a href="http://www.twitter.com/RefugioAmigosPeludos" target="_blank"><img src="img/ico/tw.png" alt="Icono Twitter"></a></li>
+                        <li><a href="http://www.youtube.com/RefugioAmigosPeludos" target="_blank"><img src="img/ico/yt.png" alt="Icono Youtube"></a></li>
+                        <li><a href="http://www.instagram.com/RefugioAmigosPeludos" target="_blank"><img src="img/ico/ig.png" alt="Icono Instagram"></a></li>
+                    </ul>
+                </nav>
+            </div>
+           
+    </div>
+    <div class="logowpp">
+                <a href="https://api.whatsapp.com/send?phone=542996748781" target="_blank"><img src="img/ico/whatsapp.png" alt="Icono Whatsapp"></a>  
+    </div> 
+  </footer>
+
   <script src="js/nav.js"></script>
   <script src="js/script.js"></script>
-</body>
 
+</body>
 </html>

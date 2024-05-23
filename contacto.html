@@ -1,53 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Icono Pestaña -->
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="./img/iconoPestaña.png">
+  <link href="css/style.css" rel="stylesheet">
   <title>Contacto</title>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <link href="css/contacto.css" rel="stylesheet">
+  <!-- link de fontawsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container sombra">
       <div id="nav-externo"></div>
     </div>
   </header>
- 
-
-  <div class="contenedor roboto-light">
-    
-    <div class="texto">
-      <h2>Contáctanos</h2>
-      <p>
-        ¡Nos encantaría saber de ti! Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto con
-        nosotros, no dudes en hacerlo. Completa el formulario a continuación y te responderemos lo antes posible.
+  <div class="contenedor-contacto">
+    <div class="box-contacto">
+      <h2 class="titulo-contacto">Contáctanos</h2>
+      <p class="parr-contacto">
+        ¡Nos encantaría saber de ti! Si tienes alguna pregunta, sugerencia o
+        simplemente quieres ponerte en contacto con nosotros, no dudes en
+        hacerlo. Completa el formulario a continuación y te responderemos lo
+        antes posible.
       </p>
-      
-      <h2>Ubícanos</h2>
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.45340225006!2d-58.515698696010766!3d-34.61565477009822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses-419!2spe!4v1714785895543!5m2!1ses-419!2spe"></iframe>
+    </div>
+
+    <div class="redes">
+      <h2 class="redes_titulo">Nuestras Redes</h2>
+      <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i>Tiktok</a>
+      <div class="direccion">
+        <h3>Dirección y Teléfono</h3>
+        <p><i class="fa-solid fa-map-marker-alt"></i> Calle Falsa 123, Ciudad, País</p>
+        <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
       </div>
 
     </div>
+
     <div class="form-contacto">
       <form class="form">
         <div class="form_box">
           <label for="nombre">Nombre completo:</label>
-          <input type="text" id="nombre" class="input_text" name="nombre">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="nombre" class="input_text" name="nombre" />
           <p class="msje-error"></p>
         </div>
         <div class="form_box">
           <label for="email">Email:</label>
-          <input type="email" id="email" class="input_text" name="email">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" class="input_text" name="email" />
           <p class="msje-error"></p>
         </div>
         <div class="form_box">
           <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" class="input_text" name="telefono">
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" id="telefono" class="input_text" name="telefono" />
           <p class="msje-error"></p>
         </div>
         <div class="form_box">
@@ -60,37 +74,70 @@
             <option value="Otro">Otro</option>
           </select>
         </div>
-        
-        <div class="form_box ">
+
+        <div class="form_box">
           <label>Preferencias de contacto:</label>
-        
+
           <label for="emailCheck" class="label_checkbox">
-            <input type="checkbox" id="emailCheck" class="input_checkbox" name="preferencia" value="Email">Email
+            <input type="checkbox" id="emailCheck" class="input_checkbox" name="preferencia" value="Email" />Email
           </label>
-         
+
           <label for="telefonoCheck" class="label_checkbox">
-             <input type="checkbox" id="telefonoCheck" class="input_checkbox" name="preferencia" value="Teléfono">Teléfono
+            <input type="checkbox" id="telefonoCheck" class="input_checkbox" name="preferencia"
+              value="Teléfono" />Teléfono
           </label>
         </div>
         <div class="form_box">
           <label for="imagen">Adjuntar imagen:</label>
-          <input type="file" id="imagen" name="imagen">
+          <input type="file" id="imagen" name="imagen" class="upFile" />
         </div>
-        
+
         <div class="form_box">
           <label for="mensaje">Mensaje:</label>
           <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
-           <p class="msje-error"></p>
+          <p class="msje-error"></p>
         </div>
-      
+
         <div class="form_box">
-          <input type="submit" value="Enviar" class="submit">
+          <input type="submit" value="Enviar" class="submit" />
         </div>
       </form>
     </div>
+
+    <div class="ubicacion">
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.45340225006!2d-58.515698696010766!3d-34.61565477009822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses-419!2spe!4v1714785895543!5m2!1ses-419!2spe"></iframe>
+      </div>
+    </div>
+
   </div>
 
-
+  <footer>
+    <div id="datos">
+      <br>
+        <p>Calle Falsa 123, Ciudad, País</p>
+        <p>Teléfono: +1 234 567 890</p>
+        <p>refugioamigospeludos@info.org</p>
+        <p><a href="contacto.html">Quiero hacer donaciones</a></p>
+        <p><a href="educacionCanina.html">Como trabaja el refugio</a></p>
+        <p><a href="nuestrosPerros.html">Conoce nuestros rescataditos</a></p><br>
+            <div id="redes">
+                <nav id="botonera_footer">
+                    <ul>
+                        <li><a href="http://www.facebook.com/RefugioAmigosPeludos" target="_blank" ><img src="img/ico/fb.png" alt="Icono Facebook"></a></li>
+                        <li><a href="http://www.twitter.com/RefugioAmigosPeludos" target="_blank"><img src="img/ico/tw.png" alt="Icono Twitter"></a></li>
+                        <li><a href="http://www.youtube.com/RefugioAmigosPeludos" target="_blank"><img src="img/ico/yt.png" alt="Icono Youtube"></a></li>
+                        <li><a href="http://www.instagram.com/RefugioAmigosPeludos" target="_blank"><img src="img/ico/ig.png" alt="Icono Instagram"></a></li>
+                    </ul>
+                </nav>
+            </div>
+           
+    </div>
+    <div class="logowpp">
+                <a href="https://api.whatsapp.com/send?phone=542996748781" target="_blank"><img src="img/ico/whatsapp.png" alt="Icono Whatsapp"></a>  
+    </div> 
+  </footer>
   <script src="js/nav.js"></script>
   <script src="js/script.js"></script>
 </body>
