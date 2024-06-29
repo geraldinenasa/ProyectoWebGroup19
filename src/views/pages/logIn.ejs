@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <header class="header">
+        <div class="container">
+          <div id="nav-externo">
+            <!-- navegacion desde js -->
+             <%- include('../partials/nav') %>
+          </div>
+        </div>
+    </header>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="metodo">Método:</label>
+                <select id="metodo" name="metodo">
+                    <option value="email">Email</option>
+                    <option value="telefono">Teléfono</option>
+                </select>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="/#">Regístrate aquí</a></p>
+    </div>
+    <%- include('../partials/footer') %>
+</body>
+</html>

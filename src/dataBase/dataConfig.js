@@ -1,4 +1,6 @@
 const mysql = require('mysql2');
+const util = require("util");
+
 const pool = mysql.createPool({
     host:'sql10.freesqldatabase.com',
     user: 'sql10716372',
@@ -18,4 +20,5 @@ pool.getConnection((err) => {
     }
 });
 
+pool.query = util.promisify(pool.query);
 module.exports = pool;

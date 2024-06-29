@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <header class="header">
+        <div class="container">
+          <div id="nav-externo">
+            <!-- navegacion desde js -->
+             <%- include('../partials/nav') %>
+          </div>
+        </div>
+      </header>
+      <div class="registro-mascotas">
+        <form action="/registroEnviado" method="POST" enctype="multipart/form-data">
+            <h1 class="titulo-form">Formulario de Registro</h1>
+            <div class="form-container">
+                <div class="form-left">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" maxlength="50">
+                    </div>
+                    <div>
+                        <label for="raza">Raza:</label>
+                        <input type="text" id="raza" name="raza" maxlength="50">
+                    </div>
+                    <div>
+                        <label for="sexo">Sexo:</label>
+                        <input type="text" id="sexo" name="sexo" maxlength="50">
+                    </div>
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input type="text" id="edad" name="edad" maxlength="50">
+                    </div>
+                    <div>
+                        <label for="peso">Peso:</label>
+                        <input type="text" id="peso" name="peso" maxlength="50">
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div>
+                        <label for="tamanio">Tamaño:</label>
+                        <input type="text" id="tamanio" name="tamanio" maxlength="50">
+                    </div>
+                    <div>
+                        <label for="fecha_ingreso">Fecha de Ingreso:</label>
+                        <input type="text" id="fecha_ingreso" name="fecha_ingreso">
+                    </div>
+                    <div>
+                        <label for="adoptado">Adoptado:</label>
+                        <input type="checkbox" id="adoptado" name="adoptado">
+                    </div>
+                    <div>
+                        <label for="imagen">Imagen:</label>
+                        <input type="file" id="imagen" name="imagen">
+                    </div>
+                    <div>
+                        <button type="submit">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    <%- include('../partials/footer') %>
+</body>
+</html>
