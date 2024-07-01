@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <header class="header">
+        <div class="container">
+          <div id="nav-externo">
+            <!-- navegacion desde js -->
+             <%- include('../partials/nav') %>
+          </div>
+        </div>
+    </header>
+    <header class="header_nuestros_perros sombra">
+        <div class="contenedor_h1">
+          <h1><a href="/formularioPerros">Click aquí </a>para registrar una mascota</h1>
+        </div>
+      </header>
+      <div class="section_nuestros_perros">
+        <p>En Refugio De Amigos Peludos, creemos firmemente en encontrar hogares amorosos y permanentes para cada uno de
+          nuestros amigos de cuatro patas.<br> Adoptar un perro no solo te brinda compañía y alegría, sino que también
+          salvas una vida y le das a un perro la oportunidad de tener un hogar lleno de amor y cuidado.<br>Desde perros
+          pequeños y juguetones hasta compañeros más grandes y tranquilos, tenemos una variedad de perros de diferentes
+          edades, tamaños y personalidades esperando ser adoptados.<br> Nuestro equipo estará encantado de ayudarte a
+          encontrar el compañero peludo perfecto que se adapte a tu estilo de vida y necesidades.</p>
+      </div>
+    <main class="cont-padre">
+        <% perros.forEach(perro =>{%>
+            <div class="card card-perro">
+                <img class="img-card img-prod" src="<%= perro.imagen%>" alt="<%= perro.nombre %>">
+                <h2 class="titulo-perro"><%= perro.nombre %></h2>
+                <p class="texto-perro">Sexo: <%= perro.sexo %></p>
+                <p class="texto-perro">Edad: <%= perro.edad %> </p>
+                <p class="texto-perro">Peso: <%= perro.peso %></p>
+                <p class="texto-perro">Adoptado: <%= perro.adoptado ? 'Sí' : 'No' %></p>
+                <!-- <a class="boton-ver"href="#">Adoptar</a> -->
+            </div>
+        <% }) %>    
+    </main >
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

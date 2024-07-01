@@ -1,15 +1,16 @@
 const pool = require('../dataBase/dataConfig');
-const url_imagen = `http://localhost:3000/`;
+const url_imagen = `http://localhost:3000/img/`;
 
 /**Obtiene todos los perros de la base de datos */
 const listarTodo = async(req, res) => {
     const sql = `SELECT * FROM perros`;
-    pool.query(sql, (error, results) => {
+    pool.query(sql, (error, perros) => {
         if(error) {
             console.log(`Error en la consulta SQL: `, error)
             return res.status(500).send(`Error al obtener los datos`)
         } else {
-            res.json(results)
+            // res.status(200).json(results)
+            res.render('pages/nuestrosPerros',{perros})
         }
     })
 };
@@ -22,7 +23,7 @@ const registroMascota = (req, res) => {
 
 const agregarMascota = async(req, res) => {
     if(!req.file) {
-        console.log("No se ha cargado ninguna imagem")
+        console.log("No se ha cargado ninguna imagen")
     }
     const image = url_imagen + req.file.filename;
     const { nombre, raza, sexo, edad, peso, tamanio, fecha_ingreso, adoptado, imagen } = req.body;

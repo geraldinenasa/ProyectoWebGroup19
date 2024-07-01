@@ -1,0 +1,26 @@
+.cont-padre{
+    margin: 80px 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.card{
+    width: 80%;
+    height: auto;
+    border: 2px solid #A0D3A5;
+    background-color: white;
+}
+.titulo-perro{
+    font-size: 1.2em;
+    padding: 10px auto;
+}
+.texto-perro{
+   width: 90%;
+   text-align: center;
+}
+
+.img-card{
+    width: 100%;
+}
