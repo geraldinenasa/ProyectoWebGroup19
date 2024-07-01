@@ -51,16 +51,16 @@ const registroUsuario =(req, res) => {
 };
 
 const agregarUsuario = (req, res) => {
-    if(!req.file) {
-        console.log("No se ha cargado ninguna imagem")
-    }
+    // if(!req.file) {
+    //     console.log("No se ha cargado ninguna imagem")
+    // }
     const image = url_imagen + req.file.filename;
-    const {nombre, direccion, telefono, email, fecha_adopcion, imagen} = req.body;
+    const {nombre, direccion, telefono, email, fecha_adopcion, imagen, perro_id} = req.body;
     if(nombre === "" || direccion === "" || telefono === "" || email === "" || fecha_adopcion === "" || imagen === "") {
         return res.status(400).send('Todos los campos requeridos deben ser completados');
     }
-    const sql = 'INSERT INTO adoptantes (nombre, direccion, telefono, email, fecha_adopcion, imagen) VALUES (?, ?, ?, ?, ?, ?)';
-    const values = [nombre, direccion, telefono, email, fecha_adopcion, image]
+    const sql = 'INSERT INTO adoptantes (nombre, direccion, telefono, email, fecha_adopcion, imagen, perro_id) VALUES (?, ?, ?, ?, ?, ?, ?)';
+    const values = [nombre, direccion, telefono, email, fecha_adopcion, image, perro_id]
     pool.query(sql, values, (err, result) => {
         if(err) {
             console.error('Error en la consulta SQL: ', err);
