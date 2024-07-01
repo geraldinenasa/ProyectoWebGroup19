@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <header class="header">
+        <div class="container">
+          <div id="nav-externo">
+            <!-- navegacion desde js -->
+             <%- include('../partials/nav') %>
+          </div>
+        </div>
+    </header>
+    <div class="registro-usuario">
+        <div class="registro-container">
+            <h2>Registro de Usuario</h2>
+            <form action="/register" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_adopcion">Fecha de Adopción:</label>
+                    <input type="date" id="fecha_adopcion" name="fecha_adopcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Imagen:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*" required>
+                </div>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
